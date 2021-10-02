@@ -1,4 +1,3 @@
-setwd("C:/Users/uadgw/デスクトップ/WorkingFiles/Tnseq原稿/CommunBiol投稿/Dryad")
 library(reshape2)
 library(tidyverse)
 library(qvalue)
