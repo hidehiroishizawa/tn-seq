@@ -34,11 +34,6 @@ for (i in genes){
 results$qval_3h<-qvalue(results$pval_3h)$qvalues
 results$qval_7d<-qvalue(results$pval_7d)$qvalues
 
-#test for normal distribution
-ks.test(x=na.omit(results$log2FC_3h),y="pnorm",mean=mean(na.omit(results$log2FC_3h)),sd=sd(na.omit(results$log2FC_3h)))
-ks.test(x=na.omit(results$log2FC_7d),y="pnorm",mean=mean(na.omit(results$log2FC_7d)),sd=sd(na.omit(results$log2FC_7d)))
-
-
 #Determine Enriched and Depleted genes (FC>2, q<0.05)
 for(i in 1:nrow(results)){
   if(is.na(results$qval_3h[i])==FALSE){
